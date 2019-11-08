@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Grupo10_Paso4", "Grupo10_Pa
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "63505"
+		SlnRelativePath = "Grupo10_Paso4\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
