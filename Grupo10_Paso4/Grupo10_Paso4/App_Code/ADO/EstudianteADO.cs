@@ -21,21 +21,21 @@ public class EstudianteADO
         return contexto.SaveChanges();//Guarda los cambios y regresa un numero entero
     }
 
-    public Estudiante buscarUsuarios(int Identificacion)
+    public Estudiante buscarEstudiante(int Identificacion)
     {
         return contexto.Estudiante.Find(Identificacion);//Buscamos usuarios por Identificación
     }
-    public List<Estudiante> GetUsuarios()
+    public List<Estudiante> GetEstudiantes()
     {
         return contexto.Estudiante.ToList();//Entrega todas las categorias en una lista
     }
-    public int eliminarUsuario(int Identificacion)
+    public int eliminarEstudiante(int Identificacion)
     {
         Estudiante user = contexto.Estudiante.Find(Identificacion);//busca el usuario
         contexto.Estudiante.Remove(user);//Elimina el usuario y la retorna
         return contexto.SaveChanges();//Guarda los cambios
     }
-    public int actualizarUsuarios(Estudiante newuser)
+    public int actualizarEstudiante(Estudiante newuser)
     {
         Estudiante user = contexto.Estudiante.Find(newuser.Identificacion);//Se crea una nueva instancia buscando los datos del usuario
         user = newuser;//Asigna a la instancia el cambio de los datos

@@ -4,23 +4,23 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UnadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="UnadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Estudiante">
           <Key>
             <PropertyRef Name="Identificacion" />
           </Key>
           <Property Name="Identificacion" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="nchar" MaxLength="40" />
-          <Property Name="Primer_Apellidos" Type="nchar" MaxLength="25" />
+          <Property Name="Primer_Apellido" Type="nchar" MaxLength="25" />
           <Property Name="Segundo_Apellido" Type="nchar" MaxLength="25" Nullable="false" />
           <Property Name="CEAD" Type="nchar" MaxLength="20" />
           <Property Name="Programa" Type="nchar" MaxLength="30" />
+          <Property Name="Correo" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="UnadModelStoreContainer">
           <EntitySet Name="Estudiante" EntityType="Self.Estudiante" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UnadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -30,10 +30,11 @@
           </Key>
           <Property Name="Identificacion" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
-          <Property Name="Primer_Apellidos" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+          <Property Name="Primer_Apellido" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
           <Property Name="Segundo_Apellido" Type="String" MaxLength="25" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="CEAD" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="Programa" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="UnadEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Estudiante" EntityType="Self.Estudiante" />
@@ -47,9 +48,10 @@
           <EntitySetMapping Name="Estudiante">
             <EntityTypeMapping TypeName="UnadModel.Estudiante">
               <MappingFragment StoreEntitySet="Estudiante">
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Primer_Apellidos" ColumnName="Primer_Apellidos" />
                 <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
                 <ScalarProperty Name="CEAD" ColumnName="CEAD" />
                 <ScalarProperty Name="Programa" ColumnName="Programa" />

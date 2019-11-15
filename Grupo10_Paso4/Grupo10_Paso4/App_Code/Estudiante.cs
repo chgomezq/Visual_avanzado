@@ -14,8 +14,9 @@ public partial class Estudiante
 {
     public int Identificacion { get; set; }
     public string Nombre { get; set; }
-    public string Primer_Apellidos { get; set; }
+    public string Primer_Apellido { get; set; }
     public string Segundo_Apellido { get; set; }
     public string CEAD { get; set; }
     public string Programa { get; set; }
+    public string Correo { get; set; }
 }
