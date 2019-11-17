@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>AYUDAS DIDACTICAS UNAD</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,9 +22,10 @@
                <asp:TextBox ID="TxtCEAD" runat="server" CssClass="form-control" placeHolder="CEAD"></asp:TextBox>
                <asp:TextBox ID="TxtPrograma" runat="server" CssClass="form-control" placeHolder="Programa" OnTextChanged="TxtPrograma_TextChanged"></asp:TextBox>
                <asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" placeHolder="Correo"></asp:TextBox>
+               <br />
                <asp:Button ID="btnADD" runat="server" Text="Agregar" CssClass="form-control btn btn-primary" OnClick="btnADD_Click"/>
-               
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Identificacion" 
+               <br />
+            <asp:GridView ID="GridView1" CssClass='table' runat="server" AutoGenerateColumns="False" DataKeyNames="Identificacion" 
             OnRowCancelingEdit="rowCancelEditEvent" 
             OnRowDeleting="rowDeletingEvent" 
             OnRowEditing="rowEditingEvent" 

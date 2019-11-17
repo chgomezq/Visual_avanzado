@@ -17,7 +17,10 @@ public partial class Adminweb : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        cargarGrilla();
+        if (!IsPostBack)//Necesario para que la pagina trabaje como postback
+        {
+            cargarGrilla();
+        }
     }
 
     protected void rowCancelEditEvent(object sender, GridViewCancelEditEventArgs e)
@@ -55,7 +58,23 @@ public partial class Adminweb : System.Web.UI.Page
     protected void btnADD_Click(object sender, EventArgs e)
     {
         Estudiante newuser = new Estudiante();
-        //newuser.Nombres = TxtNombres.Text.ToString();
+        newuser.Identificacion = int.Parse(TxtIdentificacion.Text.ToString());
+        newuser.Nombre = TxtNombre.Text.ToString();
+        newuser.Primer_Apellido = TxtPrimer_Apellido.Text.ToString();
+        newuser.Segundo_Apellido = TxtSegundo_Apellido.Text.ToString();
+        newuser.CEAD = TxtCEAD.Text.ToString();
+        newuser.Programa = TxtPrograma.Text.ToString();
+        newuser.Correo = TxtCorreo.Text.ToString();
+        ado.agregarEstudiante(newuser);
+        GridView1.EditIndex = -1;
+        TxtIdentificacion.Text = "";
+        TxtNombre.Text = "";
+        TxtPrimer_Apellido.Text = "";
+        TxtSegundo_Apellido.Text = "";
+        TxtCEAD.Text = "";
+        TxtPrograma.Text = "";
+        TxtCorreo.Text = "";
+        cargarGrilla();
 
     }
 

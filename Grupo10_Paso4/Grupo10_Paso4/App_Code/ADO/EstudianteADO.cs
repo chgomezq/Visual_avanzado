@@ -15,7 +15,7 @@ public class EstudianteADO
         // TODO: Agregar aquí la lógica del constructor
         //
     }
-    public int agregarUsuarios(Estudiante nueva) //Agregar un usuario
+    public int agregarEstudiante(Estudiante nueva) //Agregar un usuario
     {                                          //Clase creada durante el cargue de la conexión de la bd
         contexto.Estudiante.Add(nueva);//Agrega nuevo usuario
         return contexto.SaveChanges();//Guarda los cambios y regresa un numero entero
