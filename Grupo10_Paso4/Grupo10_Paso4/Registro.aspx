@@ -12,7 +12,8 @@
     <form id="form1" runat="server">
        <div class="container">
             <div class="jumbotron">
-                <h3>Registro de estudiantes</h3>  
+                <h3>Registro de estudiantes<asp:Image ID="Image1" runat="server" BorderStyle="None" ForeColor="Black" Height="110px" ImageAlign="Baseline" ImageUrl="~/img/unad.png" Width="160px" />
+                </h3>  
             </div>
            <div class="thumbnail">
                <asp:TextBox ID="TxtIdentificacion" runat="server" CssClass="form-control" placeHolder="Identificacion"></asp:TextBox>
