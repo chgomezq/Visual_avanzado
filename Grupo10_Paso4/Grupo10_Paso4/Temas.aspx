@@ -42,7 +42,7 @@
               </tr>
                  <tr>
                       <td align="center"><a href="SQLserver.aspx" class="btn btn-primary" style="font-family: Verdana; background-color: #0066CC; border-color: #FFFFFF; color: #FFFFFF"><strong>SQL Server</strong></a></td>
-                     <td align="center"><a href="Azure.aspx" class="btn btn-primary" style="font-family: Verdana; background-color: #0066CC; border-color: #FFFFFF; color: #FFFFFF"><strong>Azure</strong></a></td>
+                     <td align="center"><a href="AzureIndex.aspx" class="btn btn-primary" style="font-family: Verdana; background-color: #0066CC; border-color: #FFFFFF; color: #FFFFFF"><strong>Azure</strong></a></td>
                 </tr>
               <tr>
                <td><asp:Image ID="Image5" runat="server" width="470" height="270" ImageUrl="~/img/SQL.png" /></td>

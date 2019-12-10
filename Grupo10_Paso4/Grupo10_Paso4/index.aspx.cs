@@ -12,20 +12,30 @@ public partial class index : System.Web.UI.Page
     {
 
     }
-
-
-
-
     protected void btnIngresar_Click(object sender, EventArgs e)
     {
-        int Identificacion = Convert.ToInt32(TxtIdentificacion);
-        string correo = (TxtCorreo as TextBox).Text.ToUpper();
+       
+        int Identificacion = Convert.ToInt32(TxtIdentificacion.Text);
+        int Pass = Convert.ToInt32(TxtPassword.Text);
         Estudiante user = ado.buscarEstudiante(Identificacion);
-       // TxtCorreo =Convert.ToString(user.Nombre);
-        //user.Correo = correo;
-        //ado.actualizarEstudiante(user);
-        //GridView1.EditIndex = -1;
-        //cargarGrilla();
+
+        if (user==null)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('El Estudiante no se encuentra registrado o los datos ingresados son incorrectos');</script>");
+        }
+        else
+        {
+            int password = user.Identificacion;
+            if (password==Pass){
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Bienvenido Estudiante');</script>");
+                Response.Redirect("Temas.aspx");
+            }
+            else
+            {
+
+            }
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('El Estudiante no se encuentra registrado o los datos ingresados son incorrectos');</script>");
+        }
     }
 
     protected void btnRegistrar_Click(object sender, EventArgs e)

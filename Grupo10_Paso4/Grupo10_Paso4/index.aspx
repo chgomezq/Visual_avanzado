@@ -16,8 +16,8 @@
                 </h3>  
             </div>
            <div class="thumbnail">
-               <asp:TextBox ID="TxtCorreo" runat="server" CssClass="form-control" placeHolder="Correo"></asp:TextBox>
-               <asp:TextBox ID="TxtIdentificacion" runat="server" CssClass="form-control" placeHolder="Contraseña"></asp:TextBox>
+               <asp:TextBox ID="TxtIdentificacion" runat="server" CssClass="form-control" placeHolder="Usuario"></asp:TextBox>
+               <asp:TextBox ID="TxtPassword" runat="server" CssClass="form-control" placeHolder="Contraseña" input type="password"></asp:TextBox>
                <br />
                <table>
                <tr>
